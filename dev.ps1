@@ -28,26 +28,21 @@ function New-Blogpost {
     .SYNOPSIS
         Shortcut for creating new folder and file in the jekyll date format
     .EXAMPLE
-        New-BlogPost
-        New-BlogPost -AddDays 1
+        New-BlogPost "how-to-create-a-blog" -AddDays 1
+        nbp "new-blog-post"
     #>
-        param([int]$AddDays = 0)
+    [Alias("nbp")]
+    param(
+        [Parameter(Mandatory=$false,Position = 0)] 
+        [string]
+        $Title = "new-blogpost",
+        [int]$AddDays = 0)
         
-        $date = (get-date).AddDays($AddDays).ToString('yyyy-MM-dd')
+    $date = (get-date).AddDays($AddDays).ToString('yyyy-MM-dd')
     
-        New-Item -ItemType directory -Path ".\$date"
-    
-    $filedata = 
-    "---
-    title: 
-    tags:
-    - 100DaysOfCode
-    categories:
-    - Blog
-    comments: true
-    ---"
-    
-        New-Item -ItemType File -Value $filedata -Path ".\$date\$date-blogpost.md"
-    
-        code ".\$date\$date-blogpost.md"
+    New-Item -ItemType directory -Path ".\$date"
+
+    Copy-Item -Path  "$profileDir\blog_template.md" -Destination ".\$date\$date-$title.md"
+              
+    code ".\$date\$date-$title.md"
     }
