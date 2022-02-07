@@ -10,9 +10,10 @@ https://github.com/hawzy/powershell-profile/archive/refs/heads/main.zip
 I use this command: `copy-item -Path C:\github\powershell-profile\* -D C:\Users\nickh\OneDrive\Documents\Powershell\ -Recurse`
 ### Cmdlet List
 
-|Script|Description|alias|
-|---|---|---|
-|`Invoke-GitAddCommit`| Shortcut for adding and committing files using git.| `gac`|
-|`New-BlogPost`| Shortcut for creating a folder and file in jekyll date format.
+|Script|Description|alias|category|
+|---|---|---|---|
+|`Invoke-GitAddCommit`| Shortcut for adding and committing files using git.| `gac`| dev|
+|`New-BlogPost`| Shortcut for creating a folder and file in jekyll date format. | `nbp` | dev |
+
 
 
