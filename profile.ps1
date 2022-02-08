@@ -8,4 +8,6 @@ foreach ( $includeFile in ("azure", "defaults", "openssl", "dev", "windows") ) {
 
 set-poshprompt night-owl
 
+import-module -name terminal-icons
+
 Set-PSReadLineOption -PredictionSource History
