@@ -14,6 +14,10 @@ I use this command: `copy-item -Path C:\github\powershell-profile\* -D C:\Users\
 |---|---|---|---|
 |`Invoke-GitAddCommit`| Shortcut for adding and committing files using git.| `gac`| dev|
 |`New-BlogPost`| Shortcut for creating a folder and file in jekyll date format. | `nbp` | dev |
+|`get-windows-build` | Displays OperatingSystem properties from WIM | NA | windows |
+|`get-path`| Displays all environmental paths in a list | NA | windows |
+|`edge`| Launch Edge Chromium | NA | windows |
+|`get-free-space` | Display free space in GB | NA | windows |
 
 
 
